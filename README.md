@@ -18,8 +18,8 @@ gcloud container clusters create attgo-cluster --num-nodes=3
 Next is to setup and expose Redis backend:
 
 ```
-kubectl create -f files\redis-master.yaml
-kubectl create -f files\redis-master-service.yaml
+kubectl create -f kubectl\redis-master.yaml
+kubectl create -f kubectl\redis-master-service.yaml
 ```
 
 And finaly we deploy the Docker container with app:
@@ -30,5 +30,5 @@ kubectl expose deployment attgo --type="LoadBalancer"
 kubectl scale deployment/attgo --replicas=4
 ```
 
-After the external IP is assigned to the `attgo` service, application can be opened in the browser.
+After the external IP is assigned to the `attgo` service, application can be opened on path `/att`
 
