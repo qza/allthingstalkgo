@@ -1,6 +1,6 @@
 # Allthingstalkgo
 
-This is a simple Web server that increments visits counter and and can be scaled horisontaly.
+This is a simple web server that increments visits counter and can be scaled horisontaly.
 Application is written in Go and uses Redis as backend. Image is available on Docker hub:
 
 ```
